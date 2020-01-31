@@ -33,6 +33,7 @@ class ListView extends Component {
     data: PropTypes.array,
     loading: PropTypes.bool,
     onLoadMore: PropTypes.func,
+    onLoadMoreThreshold: PropTypes.number,
     onRefresh: PropTypes.func,
     getSectionId: PropTypes.func,
     sections: PropTypes.object,
@@ -101,7 +102,7 @@ class ListView extends Component {
 
     // configuration
     // default load more threshold
-    mappedProps.onEndReachedThreshold = 40;
+    mappedProps.onEndReachedThreshold = props.onLoadMoreThreshold;
 
     // style
     mappedProps.style = props.style.list;
